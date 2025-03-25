@@ -14,6 +14,22 @@ int main() {
     int Bispo = 0;
     int Bispomovimento = 5;
 
+
+    // explicando a Movimentação do Bispo
+    
+    printf ("No xadrez, o bispo pode mover-se quantas casas desejar, desde que sejam diagonais e vazias.\n");
+    printf ("O bispo se move em direção às casas da mesma cor\n");
+    printf ("O bispo não pode mudar de cor durante o jogo\n");
+    printf ("Cada jogador começa a partida com um par de bispos\n");
+    printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura\n");
+    printf ("O bispo não pode saltar sobre outras peças\n");
+
+    printf("quantas casa você vai Movimenta o Bispo\n");
+    scanf("%d",&Bispomovimento);
+
+
+    // Movimentação do Bispo
+    
     while (Bispo <= Bispomovimento)
 
     {
