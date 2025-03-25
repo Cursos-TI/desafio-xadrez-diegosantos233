@@ -12,19 +12,19 @@ int main() {
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     
     int Bispo = 0;
-    int Bispomovimento = 5;
+    int Bispomovimento = 0;
 
 
     // explicando a Movimentação do Bispo
     
     printf ("No xadrez, o bispo pode mover-se quantas casas desejar, desde que sejam diagonais e vazias.\n");
-    printf ("O bispo se move em direção às casas da mesma cor\n");
-    printf ("O bispo não pode mudar de cor durante o jogo\n");
-    printf ("Cada jogador começa a partida com um par de bispos\n");
-    printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura\n");
-    printf ("O bispo não pode saltar sobre outras peças\n");
+    printf ("O bispo se move em direção às casas da mesma cor,\n");
+    printf ("O bispo não pode mudar de cor durante o jogo,\n");
+    printf ("Cada jogador começa a partida com um par de bispos,\n");
+    printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura,\n");
+    printf ("O bispo não pode saltar sobre outras peças.\n");
 
-    printf ("quantas casa você vai Movimenta o Bispo\n");
+    printf ("quantas casas você vai Movimenta o Bispo?\n");
     printf ("digitar aqui:");
     scanf ("%d",&Bispomovimento);
 
@@ -36,12 +36,13 @@ int main() {
     {
         if (Bispo > 0)
         {
-            printf("o bispo se movimenta em diagonal esquerda para cima %d vez\n",Bispo);
+            printf("o bispo se movimenta em diagonal direita para cima %d vez\n",Bispo);
         }
 
         if (Bispo == Bispomovimento)
         {
-            printf("O bispo se movimenta %d casas em diagonal esquerda para cima\n",Bispomovimento);
+            printf("O bispo se movimenta %d casas em diagonal direita para cima\n",Bispomovimento);
+            printf ("\n\n");
         }
         
 
@@ -53,6 +54,40 @@ int main() {
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
     
     int Torre = 0;
+    int Torremovimento = 0;
+
+    // explicando a Movimentação do Torre
+    
+    printf ("No xadrez, a torre pode se mover horizontalmente ou verticalmente,\n");
+    printf("em qualquer número de casas desocupadas.\nEla não pode pular sobre peças adversárias ou aliadas.\n");
+    printf ("A torre pode capturar uma peça inimiga movendo-se para a casa em que a peça inimiga está.\n");
+    printf ("A torre pode participar de um movimento especial chamado roque, em parceria com o rei.\n");
+    printf ("A torre pode se mover quantas casas quiser na horizontal ou vertical,\nmas não pode se mover diagonalmente.\n");
+    printf ("No início da partida, cada jogador tem duas torres.\n");
+    printf ("As torres brancas começam nas casas a1 e h1.\n");
+    printf ("As torres pretas começam nas casas a8 e h8.\n");
+
+    printf ("quantas casas você vai Movimenta o Torre?\n");
+    printf ("digitar aqui:");
+    scanf ("%d",&Torremovimento);
+
+
+    // Movimentação do Torre
+
+    do {
+        if (Torre > 0)
+        {
+            printf("a torre se mover %d para cima\n",Torre);
+        }
+
+        if (Torre == Torremovimento)
+        {
+            printf("O Torre se movimenta %d casas para cima\n",Torremovimento);
+        }
+
+        Torre++;
+    
+    } while (Torre <= Torremovimento);
     
     
     // Implementação de Movimentação da Rainha
