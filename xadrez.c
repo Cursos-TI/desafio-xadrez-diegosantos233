@@ -24,8 +24,9 @@ int main() {
     printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura\n");
     printf ("O bispo não pode saltar sobre outras peças\n");
 
-    printf("quantas casa você vai Movimenta o Bispo\n");
-    scanf("%d",&Bispomovimento);
+    printf ("quantas casa você vai Movimenta o Bispo\n");
+    printf ("digitar aqui:");
+    scanf ("%d",&Bispomovimento);
 
 
     // Movimentação do Bispo
