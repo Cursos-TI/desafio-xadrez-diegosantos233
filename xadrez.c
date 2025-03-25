@@ -82,7 +82,8 @@ int main() {
 
         if (Torre == Torremovimento)
         {
-            printf("O Torre se movimenta %d casas para cima\n",Torremovimento);
+            printf ("O Torre se movimenta %d casas na Vertical para cima\n",Torremovimento);
+            printf ("\n\n");
         }
 
         Torre++;
