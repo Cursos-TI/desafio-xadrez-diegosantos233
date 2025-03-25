@@ -5,31 +5,23 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
+
+    printf ("No xadrez, a rainha pode se mover em qualquer direção,\n");
+    printf ("horizontal, vertical ou diagonalmente,\n");
+    printf ("quantas casas quiser, desde que não haja peças bloqueando.\n");
+    printf ("A rainha é a peça mais poderosa do xadrez,\n");
+    printf ("pois pode controlar uma vasta área do tabuleiro.\n");
+    printf ("Seu movimento é uma combinação do movimento da torre e do bispo.\n");
+    printf ("Cada jogador começa a partida com uma dama. A dama das brancas fica em d1,\n");
+    printf ("e a dama das pretas fica em d8.\n");
+
+    
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    int Rainha = 0;
-    int Rainhamovimento = 0;
-
-    printf ("quantas casas você vai Movimenta o Rainha?\n");
-    printf ("digitar aqui:");
-    scanf ("%d",&Rainhamovimento);
-
-    for (Rainha = 1; Rainha <= Rainhamovimento; Rainha++) {
-        if (Rainha > 0)
-        {
-            printf("a Rainha se mover %d para cima\n",Rainha);
-        }
-
-        if (Rainha == Rainhamovimento)
-        {
-            printf ("O Rainha se movimenta %d casas na Vertical para cima\n",Rainhamovimento);
-            printf ("\n\n");
-    }
-
-
+    
     int Bispo = 0;
     int Bispomovimento = 0;
 
@@ -41,7 +33,7 @@ int main() {
     printf ("O bispo não pode mudar de cor durante o jogo,\n");
     printf ("Cada jogador começa a partida com um par de bispos,\n");
     printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura,\n");
-    printf ("O bispo não pode saltar sobre outras peças.\n");
+    printf ("O bispo não pode saltar sobre outras peças.\n\n");
 
     printf ("quantas casas você vai Movimenta o Bispo?\n");
     printf ("digitar aqui:");
@@ -84,7 +76,7 @@ int main() {
     printf ("A torre pode se mover quantas casas quiser na horizontal ou vertical,\nmas não pode se mover diagonalmente.\n");
     printf ("No início da partida, cada jogador tem duas torres.\n");
     printf ("As torres brancas começam nas casas a1 e h1.\n");
-    printf ("As torres pretas começam nas casas a8 e h8.\n");
+    printf ("As torres pretas começam nas casas a8 e h8.\n\n");
 
     printf ("quantas casas você vai Movimenta o Torre?\n");
     printf ("digitar aqui:");
@@ -119,7 +111,7 @@ int main() {
     // explicando a Movimentação do Rainha
     
     printf ("No xadrez, a rainha pode se mover em qualquer direção,\n");
-    printf("horizontal, vertical ou diagonalmente,\n");
+    printf ("horizontal, vertical ou diagonalmente,\n");
     printf ("quantas casas quiser, desde que não haja peças bloqueando.\n");
     printf ("A rainha é a peça mais poderosa do xadrez,\n");
     printf ("pois pode controlar uma vasta área do tabuleiro.\n");
@@ -131,7 +123,7 @@ int main() {
     printf ("digitar aqui:");
     scanf ("%d",&Rainhamovimento);
 
-    for (Rainha = 1; Rainha <= Rainhamovimento; Rainha++) {
+    for (Rainha = 1; Rainhamovimento <= Rainha; Rainha++) {
         if (Rainha > 0)
         {
             printf("a Rainha se mover %d para cima\n",Rainha);
