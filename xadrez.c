@@ -1,153 +1,108 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
-int main() {
-
-    printf ("No xadrez, a rainha pode se mover em qualquer direção,\n");
-    printf ("horizontal, vertical ou diagonalmente,\n");
-    printf ("quantas casas quiser, desde que não haja peças bloqueando.\n");
-    printf ("A rainha é a peça mais poderosa do xadrez,\n");
-    printf ("pois pode controlar uma vasta área do tabuleiro.\n");
-    printf ("Seu movimento é uma combinação do movimento da torre e do bispo.\n");
-    printf ("Cada jogador começa a partida com uma dama. A dama das brancas fica em d1,\n");
-    printf ("e a dama das pretas fica em d8.\n");
-
+    int main() {
     
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+        // declarando as variáveis do Bispo
+        
+        int Bispo = 1;
+        int Bispomovimenta = 0;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-    
-    int Bispo = 0;
-    int Bispomovimento = 0;
+        // explicando a movimentação do Bispo
 
+        printf("No xadrez, o bispo se movimenta em diagonal, \nquantas casas quiser, \nmas apenas em um sentido.\n\n");
 
-    // explicando a Movimentação do Bispo
-    
-    printf ("No xadrez, o bispo pode mover-se quantas casas desejar, desde que sejam diagonais e vazias.\n");
-    printf ("O bispo se move em direção às casas da mesma cor,\n");
-    printf ("O bispo não pode mudar de cor durante o jogo,\n");
-    printf ("Cada jogador começa a partida com um par de bispos,\n");
-    printf ("Um bispo se move pelas casas de cor clara e o outro pelas casas de cor escura,\n");
-    printf ("O bispo não pode saltar sobre outras peças.\n\n");
+        // entrada de dados do Bispo
 
-    printf ("quantas casas você vai Movimenta o Bispo?\n");
-    printf ("digitar aqui:");
-    scanf ("%d",&Bispomovimento);
+        printf ("Quantas casas você que movimenta o bispo\n");
+        printf ("digite aqui:");
+        scanf ("%d",&Bispomovimenta);
 
+        // movimentação do Bispo
 
-    // Movimentação do Bispo
-    
-    while (Bispo <= Bispomovimento)
-
-    {
-        if (Bispo > 0)
+        while (Bispo <= Bispomovimenta)
         {
-            printf("o bispo se movimenta em diagonal direita para cima %d vez\n",Bispo);
+            if(Bispo <= Bispomovimenta){
+    
+                printf("Bispo %d casas na diagonal superior direita\n",Bispo);
+            
+            }
+            if (Bispo >= Bispomovimenta)
+            {
+                printf("A movimentação do Bispo foi concluída\n\n");
+            }
+        
+            Bispo++;
         }
 
-        if (Bispo == Bispomovimento)
+        // declarando as variáveis do Torre
+
+        int Torre = 1;
+        int Torremovimenta = 0;
+
+
+        // explicando a movimentação do Torre
+
+        printf("No xadrez, a torre pode se mover em linha reta, \nhorizontalmente ou verticalmente, quantas casas quiser, \ndesde que não haja peças no caminho.\n\n");
+        
+        // entrada de dados do Torre
+
+        printf ("Quantas casas você que movimenta a Torre\n");
+        printf ("digite aqui:");
+        scanf ("%d",&Torremovimenta);
+
+        // movimentação do Torre
+
+        do
         {
-            printf("O bispo se movimenta %d casas em diagonal direita para cima\n",Bispomovimento);
-            printf ("\n\n");
+            if (Torre <= Torremovimenta){
+            
+                printf("Torre: %d casas para a direita\n",Torre);
+            }
+
+            if (Torre >= Torremovimenta)
+            {
+                printf("A movimentação da Torre foi concluída\n\n");
+            }
+            
+            Torre++;
+        } while (Torre <= Torremovimenta);
+        
+        
+        // declarando as variáveis do Rainha
+
+        int Rainha = 1;
+        int Rainhamovimenta = 0;
+
+
+        // explicando a movimentação do Rainha
+
+        printf("No xadrez, a rainha, também conhecida como dama, \npode se mover em qualquer direção, \nhorizontal, vertical ou diagonal, \nquantas casas quiser, desde que não haja peças bloqueando.\n\n");
+        
+        // entrada de dados do Rainha
+
+        printf ("Quantas casas você que movimenta a Rainha\n");
+        printf ("digite aqui:");
+        scanf ("%d",&Rainhamovimenta);
+
+        // movimentação do Rainha
+
+        for (Rainha; Rainha <= Rainhamovimenta; Rainha++){
+            
+            if (Rainha <= Rainhamovimenta){
+                
+                    printf("Rainha: %d casas para a esquerda\n",Rainha);
+                
+            }
+
+            if (Rainha >= Rainhamovimenta){
+
+                printf("A movimentação da Rainha foi concluída\n\n");
+            }
+        
+    
         }
         
 
-        Bispo++;
-    }
-    
-
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-    
-    int Torre = 0;
-    int Torremovimento = 0;
-
-    // explicando a Movimentação do Torre
-    
-    printf ("No xadrez, a torre pode se mover horizontalmente ou verticalmente,\n");
-    printf("em qualquer número de casas desocupadas.\nEla não pode pular sobre peças adversárias ou aliadas.\n");
-    printf ("A torre pode capturar uma peça inimiga movendo-se para a casa em que a peça inimiga está.\n");
-    printf ("A torre pode participar de um movimento especial chamado roque, em parceria com o rei.\n");
-    printf ("A torre pode se mover quantas casas quiser na horizontal ou vertical,\nmas não pode se mover diagonalmente.\n");
-    printf ("No início da partida, cada jogador tem duas torres.\n");
-    printf ("As torres brancas começam nas casas a1 e h1.\n");
-    printf ("As torres pretas começam nas casas a8 e h8.\n\n");
-
-    printf ("quantas casas você vai Movimenta o Torre?\n");
-    printf ("digitar aqui:");
-    scanf ("%d",&Torremovimento);
-
-
-    // Movimentação do Torre
-
-    do {
-        if (Torre > 0)
-        {
-            printf("a torre se mover %d para cima\n",Torre);
-        }
-
-        if (Torre == Torremovimento)
-        {
-            printf ("O Torre se movimenta %d casas na Vertical para cima\n",Torremovimento);
-            printf ("\n\n");
-        }
-
-        Torre++;
-    
-    } while (Torre <= Torremovimento);
-    
-    
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    
-    int Rainha = 0;
-    int Rainhamovimento = 0;
-
-    // explicando a Movimentação do Rainha
-    
-    printf ("No xadrez, a rainha pode se mover em qualquer direção,\n");
-    printf ("horizontal, vertical ou diagonalmente,\n");
-    printf ("quantas casas quiser, desde que não haja peças bloqueando.\n");
-    printf ("A rainha é a peça mais poderosa do xadrez,\n");
-    printf ("pois pode controlar uma vasta área do tabuleiro.\n");
-    printf ("Seu movimento é uma combinação do movimento da torre e do bispo.\n");
-    printf ("Cada jogador começa a partida com uma dama. A dama das brancas fica em d1,\n");
-    printf ("e a dama das pretas fica em d8.\n");
-
-    printf ("quantas casas você vai Movimenta o Rainha?\n");
-    printf ("digitar aqui:");
-    scanf ("%d",&Rainhamovimento);
-
-    for (Rainha = 1; Rainhamovimento <= Rainha; Rainha++) {
-        if (Rainha > 0)
-        {
-            printf("a Rainha se mover %d para cima\n",Rainha);
-        }
-
-        if (Rainha == Rainhamovimento)
-        {
-            printf ("O Rainha se movimenta %d casas na Vertical para cima\n",Rainhamovimento);
-            printf ("\n\n");
-    }
-
-
-
-    
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
-
+        
     return 0;
 }
